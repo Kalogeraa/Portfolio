@@ -1,0 +1,11 @@
+SELECT ProductName FROM `products`;
+SELECT DISTINCT Country FROM `suppliers`;
+SELECT * FROM `products` WHERE Price <= 30;
+SELECT OrderID, EmployeeID FROM `orders` WHERE EmployeeID = 4;
+SELECT * FROM `customers` WHERE ContactName = "Maria Anders";
+SELECT * FROM `order_details` WHERE Quantity > 39;
+SELECT * FROM `suppliers` WHERE Country = "USA" AND City = "Boston";
+SELECT * FROM `suppliers` WHERE Country = "UK" OR Country = "Germany";
+SELECT * FROM `suppliers` WHERE NOT Country = "USA";
+SELECT * FROM `customers` WHERE City IS NULL;
+SELECT * FROM `customers` WHERE City IS NOT NULL;
