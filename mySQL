@@ -9,3 +9,33 @@ SELECT * FROM `suppliers` WHERE Country = "UK" OR Country = "Germany";
 SELECT * FROM `suppliers` WHERE NOT Country = "USA";
 SELECT * FROM `customers` WHERE City IS NULL;
 SELECT * FROM `customers` WHERE City IS NOT NULL;
+
+# The maximum value for a column 'Price'
+SELECT MAX(Price) FROM 'products';
+
+# The maximum value for a column 'Price'
+SELECT MIN(Price) FROM 'products';
+
+How many rows were returned from a given query
+SELECT COUNT(SupplierID) FROM 'products' WHERE SupplierID = 1;
+
+The average value of the column
+SELECT AVG(Price) FROM 'products' WHERE SupplierID = 1;
+
+The sum of the column
+SELECT SUM(Price) FROM 'products' WHERE SupplierID = 1;
+
+Getting contacts that end with the letter 'n'
+SELECT * FROM 'customers' WHERE ContactName LIKE '%n';
+
+Getting contacts that start with the letter 'p' and end with the letter 'n'
+SELECT * FROM 'customers' WHERE ContactName LIKE 'p%n';
+
+Getting contacts where the second letter is 'a'
+SELECT * FROM 'customers' WHERE ContactName LIKE '_a%';
+
+SELECT * FROM 'customers' WHERE ContactName LIKE '_ar%';
+SELECT * FROM 'customers' WHERE ContactName LIKE '_ar%s';
+
+Getting contacts with a minimum of 5 letters
+SELECT * FROM 'customers' WHERE ContactName LIKE '_____%';
