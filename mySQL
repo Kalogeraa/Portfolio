@@ -10,11 +10,13 @@ SELECT * FROM `suppliers` WHERE NOT Country = "USA";
 SELECT * FROM `customers` WHERE City IS NULL;
 SELECT * FROM `customers` WHERE City IS NOT NULL;
 
+
 # The maximum value for a column 'Price'
 SELECT MAX(Price) FROM 'products';
 
 # The maximum value for a column 'Price'
 SELECT MIN(Price) FROM 'products';
+
 
 How many rows were returned from a given query
 SELECT COUNT(SupplierID) FROM 'products' WHERE SupplierID = 1;
@@ -24,6 +26,7 @@ SELECT AVG(Price) FROM 'products' WHERE SupplierID = 1;
 
 The sum of the column
 SELECT SUM(Price) FROM 'products' WHERE SupplierID = 1;
+
 
 Getting contacts that end with the letter 'n'
 SELECT * FROM 'customers' WHERE ContactName LIKE '%n';
