@@ -42,3 +42,14 @@ SELECT * FROM 'customers' WHERE ContactName LIKE '_ar%s';
 
 Getting contacts with a minimum of 5 letters
 SELECT * FROM 'customers' WHERE ContactName LIKE '_____%';
+
+SELECT COUNT(*) FROM `products`;
+SELECT SupplierID, COUNT(*) FROM `products` GROUP BY SupplierID;
+SELECT SupplierID, SUM(Price) FROM `products` GROUP BY SupplierID ORDER BY SUM(Price) DESC;
+SELECT SupplierID, SUM(Price) FROM `products` GROUP BY SupplierID ORDER BY SUM(Price) ASC;
+SELECT SupplierID, SUM(Price), COUNT(ProductID) FROM `products` GROUP BY SupplierID ORDER BY SUM(Price) ASC;
+SELECT CategoryID, COUNT(*) AS ProductNumber FROM `products` GROUP BY CategoryID;
+SELECT CategoryID, COUNT(*) AS ProductNumber, SUM(Price) FROM `products` GROUP BY CategoryID;
+SELECT * FROM `categories` INNER JOIN `products` ON categories.CategoryID = products.CategoryID;
+SELECT CategoryName, Description, COUNT(*) FROM `categories` INNER JOIN `products` ON categories.CategoryID = products.CategoryID GROUP BY CategoryName;
+SELECT products.CategoryID, CategoryName, Description, COUNT(*) FROM `categories` INNER JOIN `products` ON categories.CategoryID = products.CategoryID GROUP BY CategoryName;
