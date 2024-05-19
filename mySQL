@@ -60,6 +60,11 @@ SELECT CustomerName, Country FROM `customers` ORDER BY Country ASC, CustomerName
 SELECT * FROM `products` WHERE CategoryID = 2 ORDER BY Price DESC;
 SELECT * FROM `products` WHERE CategoryID = 2 ORDER BY Price DESC;
 
+View all people who live in London or Mexico
+SELECT * FROM `customers` WHERE City = 'London' OR Country = 'Mexico';
+
+Displaying records with a quantitative limit, with an assumed time interval, with combined ordering
+SELECT * FROM `orders` WHERE OrderDate BETWEEN '1996-09-16' AND '1996-10-30' ORDER BY ShipperID DESC, OrderID ASC LIMIT 6;
 
 
 SELECT COUNT(*) FROM `products`;
