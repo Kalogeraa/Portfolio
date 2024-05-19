@@ -51,6 +51,11 @@ SELECT * FROM `orders` WHERE EmployeeID BETWEEN 1 AND 3;
 The total price of products for which Unit starts from 12
 SELECT SUM(Price) AS PriceSUM FROM `products` WHERE Unit LIKE '12%';
 
+Aliases
+SELECT CustomerName AS CustomerN, ContactName AS ContactN FROM `customers`;
+SELECT SUM(Price) AS EndSum FROM `products`;
+
+
 SELECT COUNT(*) FROM `products`;
 SELECT SupplierID, COUNT(*) FROM `products` GROUP BY SupplierID;
 SELECT SupplierID, SUM(Price) FROM `products` GROUP BY SupplierID ORDER BY SUM(Price) DESC;
