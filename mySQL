@@ -43,6 +43,14 @@ SELECT * FROM 'customers' WHERE ContactName LIKE '_ar%s';
 Getting contacts with a minimum of 5 letters
 SELECT * FROM 'customers' WHERE ContactName LIKE '_____%';
 
+Compartments
+SELECT * FROM `orders` WHERE OrderDate >= '1996-07-01' AND OrderDate <= '1996-07-10';
+SELECT * FROM `orders` WHERE OrderDate BETWEEN '1996-07-02' AND '1996-07-12';
+SELECT * FROM `orders` WHERE EmployeeID BETWEEN 1 AND 3;
+
+The total price of products for which Unit starts from 12
+SELECT SUM(Price) AS PriceSUM FROM `products` WHERE Unit LIKE '12%';
+
 SELECT COUNT(*) FROM `products`;
 SELECT SupplierID, COUNT(*) FROM `products` GROUP BY SupplierID;
 SELECT SupplierID, SUM(Price) FROM `products` GROUP BY SupplierID ORDER BY SUM(Price) DESC;
